@@ -1,0 +1,7 @@
+{
+  "name": "Etic go",
+  "description": "Una agencia de viajes dedicada a experiencias éticas, eco-amigables y aventuras inolvidables en la naturaleza.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

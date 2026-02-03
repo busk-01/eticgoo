@@ -1,0 +1,136 @@
+
+/* Estilos Maestros Etic go - Huella & Vuelo */
+
+:root {
+  --color-emerald: #059669;
+  --color-cyan: #06b6d4;
+  --color-slate-900: #0f172a;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tipografía de Marca */
+.font-logo {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.font-huella {
+  letter-spacing: 0.25em;
+  font-weight: 300;
+  text-transform: lowercase;
+}
+
+/* Colores y Degradados */
+.gradient-etic {
+  background: linear-gradient(135deg, var(--color-emerald) 0%, var(--color-cyan) 100%);
+}
+
+.text-gradient-etic {
+  background: linear-gradient(135deg, var(--color-emerald) 0%, var(--color-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Patrones de Fondo */
+.bg-huella-pattern {
+  background-image: url("https://www.transparenttextures.com/patterns/micro-carbon.png");
+  opacity: 0.05;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+/* Personalización de Mapas Leaflet */
+.leaflet-container {
+  border-radius: 2.5rem !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05) !important;
+  z-index: 10;
+}
+
+.modern-map-popup .leaflet-popup-content-wrapper {
+  border-radius: 1.5rem !important;
+  padding: 0 !important;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid rgba(5, 150, 105, 0.1) !important;
+}
+
+.modern-map-popup .leaflet-popup-content {
+  margin: 0 !important;
+  width: 220px !important;
+}
+
+.modern-map-popup .leaflet-popup-tip-container {
+  display: none;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Estilos de Impresión (PDF Dossier) */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+  .printable-area {
+    padding: 0 !important;
+  }
+}
+
+/* Utilidades de Bordes */
+.rounded-huge {
+  border-radius: 3.5rem;
+}
+
+/* Estilo para los iconos sociales del footer */
+.mask-social {
+  background-color: currentColor;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
